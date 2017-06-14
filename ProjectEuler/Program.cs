@@ -7,6 +7,7 @@
  * 2. Even Fibonacci numbers
  * 3. Largest prime Ffctor
  * 4. Largest palindrome product
+ * 5. Smallest Mutiple
  */
 
 using System;
@@ -34,6 +35,9 @@ namespace ProjectEuler
 
             ProjectEuler.PalindromeProduct four = new ProjectEuler.PalindromeProduct();
             four.display();
+
+            ProjectEuler.SmallestMultiple five = new ProjectEuler.SmallestMultiple();
+            five.display();
 
             Console.ReadLine();
 
