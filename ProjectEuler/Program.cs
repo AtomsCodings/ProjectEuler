@@ -8,6 +8,7 @@
  * 3. Largest prime Ffctor
  * 4. Largest palindrome product
  * 5. Smallest Mutiple
+ * 6. Sum Square Difference
  */
 
 using System;
@@ -24,23 +25,25 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            ProjectEuler.Mutiplesof one = new ProjectEuler.Mutiplesof();
-            one.display();
+           // ProjectEuler.Mutiplesof one = new ProjectEuler.Mutiplesof();
+          //  one.display();
 
-            ProjectEuler.EvenFibonacci two = new ProjectEuler.EvenFibonacci();
-            two.display();
+          //  ProjectEuler.EvenFibonacci two = new ProjectEuler.EvenFibonacci();
+          //  two.display();
 
-            ProjectEuler.LargestPrime three = new ProjectEuler.LargestPrime();
-            three.display();
+         //   ProjectEuler.LargestPrime three = new ProjectEuler.LargestPrime();
+          //  three.display();
 
-            ProjectEuler.PalindromeProduct four = new ProjectEuler.PalindromeProduct();
-            four.display();
+          //  ProjectEuler.PalindromeProduct four = new ProjectEuler.PalindromeProduct();
+         //   four.display();
 
             ProjectEuler.SmallestMultiple five = new ProjectEuler.SmallestMultiple();
             five.display();
 
-            Console.ReadLine();
+            ProjectEuler.SumSquareDif six = new ProjectEuler.SumSquareDif();
+            six.display();
 
+            Console.ReadLine();
         }
     }
 }

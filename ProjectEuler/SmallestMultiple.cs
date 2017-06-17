@@ -33,7 +33,6 @@ namespace ProjectEuler
             for (int i = 1; i <= 20; i++)
             {
                 largestNo = largestNo * i;
-
             }
 
 
@@ -41,45 +40,17 @@ namespace ProjectEuler
             {
                 if (j != 0)
                 {
-                    if (j % 19 == 0)
+                    if ((j % 19 == 0) & (j % 18 == 0) & (j % 17 == 0) & (j % 16 == 0) & (j % 15 == 0))
                     {
-
-                        if (j % 18 == 0)
-                        {
-                            if (j % 17 == 0)
-                            {
-                                if (j % 16 == 0)
-                                {
-                                    if (j % 15 == 0)
-                                    {
-                                        if (j % 14 == 0)
-                                        {
-                                            if (j % 13 == 0)
-                                            {
-                                                if (j % 12 == 0)
-                                                {
-                                                    if (j % 11 == 0)
-                                                    {
-                                                        if (j % 10 == 0)
-                                                        {
-                                                            foundNo = j;
-                                                            break;
-
-                                                        }
-                                                    }
-                                                }
-                                            }
-
-                                        }
-                                    }
-
-                                }
-                            }
-                        }
+                       if ((j % 14 == 0) & (j % 13 == 0) & (j % 12 == 0) & (j % 11 == 0) & (j % 10 == 0))                                                      
+                       {
+                            foundNo = j;
+                            break;
+                       }
+        
                     }
                 }
             }
-
             Console.WriteLine(foundNo);
         }  
 
