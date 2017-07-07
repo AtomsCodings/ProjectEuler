@@ -27,7 +27,39 @@ namespace ProjectEuler
 
         public void calc()
         {
-            //in progress
+            //need to implement the sieve method as my current approach is too slow
+
+            long prime = 2;
+            long sum = 3;
+            bool isPrime = false;
+
+            do
+            {
+                isPrime = true;
+
+                for (int i = 3; i < prime; i = i + 2)
+                {
+                    if (prime % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime)
+                    sum += prime;
+
+                prime++;
+
+            }
+            while (prime < 2000000);
+
+            Console.WriteLine("Prime: " + prime + " Sum: " + sum);
+            Console.ReadLine();
         }
-    }
+
+    
+
+
+        }
+    
 }
