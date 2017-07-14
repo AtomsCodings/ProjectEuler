@@ -46,6 +46,7 @@
     <Compile Include="10001stPrime.cs" />
     <Compile Include="EvenFibonacci.cs" />
     <Compile Include="LargestPrime.cs" />
+    <Compile Include="LargestProdInGrid.cs" />
     <Compile Include="LargestProduct.cs" />
     <Compile Include="Mutiplesof.cs" />
     <Compile Include="PalindromeProduct.cs" />

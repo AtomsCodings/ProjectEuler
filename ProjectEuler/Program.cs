@@ -53,8 +53,11 @@ namespace ProjectEuler
             //  ProjectEuler.PythagoreanTriplet nine = new ProjectEuler.PythagoreanTriplet();
             //  nine.display();
 
-            ProjectEuler.SumOfPrimes ten = new ProjectEuler.SumOfPrimes();
-            ten.display();
+            //ProjectEuler.SumOfPrimes ten = new ProjectEuler.SumOfPrimes();
+            //ten.display();
+
+            ProjectEuler.LargestProdInGrid eleven = new ProjectEuler.LargestProdInGrid();
+            eleven.display();
 
             Console.ReadLine();
         }
