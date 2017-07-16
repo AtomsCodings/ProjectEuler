@@ -56,8 +56,11 @@ namespace ProjectEuler
             //ProjectEuler.SumOfPrimes ten = new ProjectEuler.SumOfPrimes();
             //ten.display();
 
-            ProjectEuler.LargestProdInGrid eleven = new ProjectEuler.LargestProdInGrid();
-            eleven.display();
+           // ProjectEuler.LargestProdInGrid eleven = new ProjectEuler.LargestProdInGrid();
+           // eleven.display();
+            
+            ProjectEuler.DivTriangularNo twelve = new ProjectEuler.DivTriangularNo();
+            twelve.display();
 
             Console.ReadLine();
         }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="10001stPrime.cs" />
+    <Compile Include="DivTriangularNo.cs" />
     <Compile Include="EvenFibonacci.cs" />
     <Compile Include="LargestPrime.cs" />
     <Compile Include="LargestProdInGrid.cs" />
