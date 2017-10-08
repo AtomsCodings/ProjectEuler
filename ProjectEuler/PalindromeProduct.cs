@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class PalindromeProduct
+    public class PalindromeProduct
     {
         public void display()
         {
@@ -24,10 +24,11 @@ namespace ProjectEuler
             Console.WriteLine("The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.");
             Console.WriteLine("Find the largest palindrome made from the product of two 3-digit numbers. \n");
 
-            calc();
+            var tuple = calc();
+            Console.WriteLine(tuple.Item1 + " * " + tuple.Item2 + " = " + tuple.Item3); 
         }
 
-        public void calc()
+        public Tuple<int, int, int> calc()
         {
             int noOneTwo = 0;
             string sOneTwo = "";
@@ -57,7 +58,7 @@ namespace ProjectEuler
                     }     
                 } 
             }
-            Console.WriteLine(noOne + " * " + noTwo + " = " + noLargest);
+            return new Tuple<int, int, int>(noOne, noTwo, noLargest);
         }
     }
 }

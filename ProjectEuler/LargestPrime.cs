@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class LargestPrime
+    public class LargestPrime
     {
         public void display()
         {
@@ -20,10 +20,10 @@ namespace ProjectEuler
             Console.WriteLine("The prime factors of 13195 are 5, 7, 13 and 29.");
             Console.WriteLine("What is the largest prime factor of the number 600851475143? \n");
 
-            calc();
+            Console.WriteLine("Largest prime factor of the number 600851475143 is " + calc());
         }
 
-        public void calc()
+        public int calc()
         {
             int i = 0;
             long number = 600851475143;
@@ -33,9 +33,7 @@ namespace ProjectEuler
                 if (number % i == 0)
                     number /= i;
             }
-
-            Console.WriteLine(i);
-        }
-       
+            return i;
+        }      
     }
 }

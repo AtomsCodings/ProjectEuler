@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 namespace ProjectEuler.Tests
 {
     [TestClass()]
-    public class MutiplesofTests
+    public class LargestPrimeTests
     {
         [TestMethod()]
         public void calcTest()
         {
             //Arrange
-            int factualAnswer = 233168;
+            int factualAnswer = 6857;
             int calcAnswer = 0;
 
             //Act
-            Mutiplesof multiplesOf = new Mutiplesof();
-            calcAnswer = multiplesOf.calc();
+            LargestPrime largestPrime = new LargestPrime();
+            calcAnswer = largestPrime.calc();
 
-            //Assert.Fail
+            //Assert
             Assert.IsTrue(Equals(factualAnswer, calcAnswer));
         }
     }

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class EvenFibonacci
+    public class EvenFibonacci
     {
         public void display()
         {
@@ -22,15 +22,14 @@ namespace ProjectEuler
             Console.WriteLine("1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...");
             Console.WriteLine("By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms. \n");
 
-            calc();
+            Console.WriteLine("Total sum: " + calc());
         }
 
-        public void calc()
+        public int calc()
         {
             int a = 0;
             int b = 1;
             int sum = 0;
-
 
             for (int i = 0; i < 10; i++)
             {
@@ -41,7 +40,7 @@ namespace ProjectEuler
 
                     sum = sum + a;
             }
-            Console.WriteLine("Total sum: " + sum);
+            return sum; 
         }
     }
 }

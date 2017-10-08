@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 namespace ProjectEuler.Tests
 {
     [TestClass()]
-    public class MutiplesofTests
+    public class PalindromeProductTests
     {
         [TestMethod()]
         public void calcTest()
         {
             //Arrange
-            int factualAnswer = 233168;
-            int calcAnswer = 0;
+            int factualAnswer = 906609;
+            var tuple = new Tuple<int, int, int>(0, 0, 0);
 
             //Act
-            Mutiplesof multiplesOf = new Mutiplesof();
-            calcAnswer = multiplesOf.calc();
+            PalindromeProduct palindromeProduct = new PalindromeProduct();
+            tuple = palindromeProduct.calc();
 
             //Assert.Fail
-            Assert.IsTrue(Equals(factualAnswer, calcAnswer));
+            Assert.IsTrue(Equals(factualAnswer, tuple.Item3));
         }
     }
 }

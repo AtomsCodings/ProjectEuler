@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 namespace ProjectEuler.Tests
 {
     [TestClass()]
-    public class MutiplesofTests
+    public class SmallestMultipleTests
     {
         [TestMethod()]
         public void calcTest()
         {
             //Arrange
-            int factualAnswer = 233168;
-            int calcAnswer = 0;
+            long factualAnswer = 232792560;
+            long answer = 0;
 
             //Act
-            Mutiplesof multiplesOf = new Mutiplesof();
-            calcAnswer = multiplesOf.calc();
+            SmallestMultiple smallestMultiple = new SmallestMultiple();
+            answer = smallestMultiple.calc();
 
             //Assert.Fail
-            Assert.IsTrue(Equals(factualAnswer, calcAnswer));
+            Assert.IsTrue(Equals(factualAnswer, answer));
         }
     }
 }

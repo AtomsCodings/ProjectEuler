@@ -22,11 +22,10 @@ namespace ProjectEuler
             Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. ");
             Console.WriteLine("The sum of these multiples is 23.  Find the sum of all the multiples of 3 or 5 below 1000. \n");
 
-            calc();
-            
+            Console.WriteLine("Total Sum: " + calc());
         }
 
-        public void calc()
+        public int calc()
         {
             int sum = 0;
 
@@ -37,8 +36,7 @@ namespace ProjectEuler
                     sum = sum + i;
                 }
             }
-            Console.WriteLine("Total Sum: " + sum);
-        }
-        
+            return sum;
+        } 
     }
 }

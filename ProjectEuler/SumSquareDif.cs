@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class SumSquareDif
+    public class SumSquareDif
     {
         public void display()
         {
@@ -32,14 +32,15 @@ namespace ProjectEuler
             Console.WriteLine("Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. \n");
 
 
-            calc();
+            Console.WriteLine("Using a for loop: " + calc());
+            Console.WriteLine("Using a mathematical approach: " + calcUsingMath());
         }
 
-        public void calc()
+        public long calc()
         {
             long sumOfSquares = 0;
             long sumOfSquared = 0;
-            
+
 
             for (int i = 1; i < 101; i++)
             {
@@ -47,22 +48,21 @@ namespace ProjectEuler
                 sumOfSquared = sumOfSquared + i;
             }
             sumOfSquared = sumOfSquared * sumOfSquared;
-        
-            Console.WriteLine("Using a loop: " + (sumOfSquared - sumOfSquares));
 
-            //**or**
+            return sumOfSquared - sumOfSquares;
+        }
 
-            sumOfSquares = 0;
-            sumOfSquared = 0;
+        public long calcUsingMath()
+        {
+            long sumOfSquares = 0;
+            long sumOfSquared = 0;
             int N = 100;
 
             sumOfSquared = N * (N + 1) / 2;
             sumOfSquared = sumOfSquared * sumOfSquared;
             sumOfSquares = (N * (N + 1) * (2 * N + 1)) / 6;
 
-            Console.WriteLine("Or using a more mathematical approach: " + (sumOfSquared - sumOfSquares));
-
+            return sumOfSquared - sumOfSquares;
         }
-
     }
 }

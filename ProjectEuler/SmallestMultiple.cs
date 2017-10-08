@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class SmallestMultiple
+    public class SmallestMultiple
     {
         public void display()
         {
@@ -21,11 +21,11 @@ namespace ProjectEuler
             Console.WriteLine("2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.");
             Console.WriteLine("What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20? \n");
 
-            calc();
+            Console.WriteLine("The positive number is " + calc().ToString());
         }
 
-        public void calc()
-        {
+        public long calc()
+        { 
             long largestNo = 1;
             long foundNo = 0;
 
@@ -47,12 +47,10 @@ namespace ProjectEuler
                             foundNo = j;
                             break;
                        }
-        
                     }
                 }
             }
-            Console.WriteLine(foundNo);
+            return foundNo;
         }  
-
     }
 }

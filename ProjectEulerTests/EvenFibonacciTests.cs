@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 namespace ProjectEuler.Tests
 {
     [TestClass()]
-    public class MutiplesofTests
+    public class EvenFibonacciTests
     {
         [TestMethod()]
         public void calcTest()
         {
             //Arrange
-            int factualAnswer = 233168;
+            int factualAnswer = 44;
             int calcAnswer = 0;
 
             //Act
-            Mutiplesof multiplesOf = new Mutiplesof();
-            calcAnswer = multiplesOf.calc();
+            EvenFibonacci evenFibonacci = new EvenFibonacci();
+            calcAnswer = evenFibonacci.calc();
 
-            //Assert.Fail
+            //Assert
             Assert.IsTrue(Equals(factualAnswer, calcAnswer));
         }
     }
