@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class PythagoreanTriplet
+    public class PythagoreanTriplet
     {
         public void display()
         {
@@ -28,10 +28,12 @@ namespace ProjectEuler
             Console.WriteLine("For example, 32 + 42 = 9 + 16 = 25 = 52. \n");
             Console.WriteLine("There exists exactly one Pythagorean triplet for which a + b + c = 1000.  Find the product abc. \n");
 
-            calc();
+            var tuple = calc();
+            Console.WriteLine(tuple.Item1 + " + " + tuple.Item2 + " + " + tuple.Item3 + " = 1000");
+            Console.WriteLine(tuple.Item1 + "^2 + " + tuple.Item2 + "^2 = " + tuple.Item3 + "^2");
         }
 
-        public void calc()
+        public Tuple<int, int, int> calc()
         {
             int aSum = 0;
             int bSum = 0;
@@ -48,16 +50,14 @@ namespace ProjectEuler
                     for (int c = b + 1; c < 1000; c++)
                     {
                         cSum = c * c;
-
                         if ((a + b + c == 1000) && (aSum + bSum == cSum))
                         {
-                            Console.WriteLine(a + " + " + b + " + " + c + " = 1000");
-                            Console.WriteLine(a + "^2 + " + b + "^2 = " + c + "^2");
-                            break;
+                            return new Tuple<int, int, int>(a, b, c);
                         }
                     }
                 }
             }
+            return new Tuple<int, int, int>(0, 0, 0);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace ProjectEuler
         }
 
         public long calc()
-        { 
+        {
             long largestNo = 1;
             long foundNo = 0;
 
@@ -42,15 +42,15 @@ namespace ProjectEuler
                 {
                     if ((j % 19 == 0) & (j % 18 == 0) & (j % 17 == 0) & (j % 16 == 0) & (j % 15 == 0))
                     {
-                       if ((j % 14 == 0) & (j % 13 == 0) & (j % 12 == 0) & (j % 11 == 0) & (j % 10 == 0))                                                      
-                       {
+                        if ((j % 14 == 0) & (j % 13 == 0) & (j % 12 == 0) & (j % 11 == 0) & (j % 10 == 0))
+                        {
                             foundNo = j;
                             break;
-                       }
+                        }
                     }
                 }
             }
             return foundNo;
-        }  
+        }
     }
 }

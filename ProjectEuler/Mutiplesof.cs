@@ -15,7 +15,6 @@ namespace ProjectEuler
 {
     public class Mutiplesof
     {
-
         public void display()
         {
             Console.WriteLine("\n 1. Multiples of \n");
@@ -37,6 +36,6 @@ namespace ProjectEuler
                 }
             }
             return sum;
-        } 
+        }
     }
 }

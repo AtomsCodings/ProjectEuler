@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class SumOfPrimes
+    public class SumOfPrimes
     {
         public void display()
         {
@@ -22,13 +22,14 @@ namespace ProjectEuler
             Console.WriteLine("The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. \n");
             Console.WriteLine("Find the sum of all the primes below two million. \n");
 
-            calc();
+            Console.WriteLine("The sum of all the primes below two million: " + calc());
+
+            var tuple = calc();
         }
 
-        public void calc()
+        public Tuple<long, long> calc()
         {
             //need to implement the sieve method as my current approach is too slow
-
             long prime = 2;
             long sum = 3;
             bool isPrime = false;
@@ -49,17 +50,10 @@ namespace ProjectEuler
                     sum += prime;
 
                 prime++;
-
             }
             while (prime < 2000000);
 
-            Console.WriteLine("Prime: " + prime + " Sum: " + sum);
-            Console.ReadLine();
+            return new Tuple<long, long>(prime, sum);
         }
-
-    
-
-
-        }
-    
+    }
 }

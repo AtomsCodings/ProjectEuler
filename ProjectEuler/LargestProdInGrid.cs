@@ -36,7 +36,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class LargestProdInGrid
+    public class LargestProdInGrid
     {
         public void display()
         {
@@ -48,11 +48,11 @@ namespace ProjectEuler
             Console.WriteLine(calc());
         }
 
-        public string calc()
+        public int calc()
         {
             int[,] grid = new int[20, 20];
             grid = TheValues();
-     
+
             int product = 0;
             int maxProduct = 0;
 
@@ -76,14 +76,14 @@ namespace ProjectEuler
                         product = grid[i, j] * grid[i + 1, j + 1] * grid[i + 2, j + 2] * grid[i + 3, j + 3];
                         maxProduct = MaxProduct(product, maxProduct);
                     }
-                    if (i <= 16  && j >= 3)
+                    if (i <= 16 && j >= 3)
                     {
                         product = grid[i, j] * grid[i + 1, j - 1] * grid[i + 2, j - 2] * grid[i + 3, j - 3];
                         maxProduct = MaxProduct(product, maxProduct);
                     }
                 }
             }
-            return maxProduct.ToString();  
+            return maxProduct;
         }
 
         public int MaxProduct(int product, int maxProduct)
@@ -96,7 +96,7 @@ namespace ProjectEuler
         //populate grid. Reading in from Excel would be alot quicker to code.
         public int[,] TheValues()
         {
-            int[,] theGrid = new int[20,20];
+            int[,] theGrid = new int[20, 20];
 
             string rowZeroValues = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08";
             string[] rowZerosplit = rowZeroValues.Split(' ');

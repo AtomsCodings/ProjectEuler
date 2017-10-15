@@ -34,6 +34,6 @@ namespace ProjectEuler
                     number /= i;
             }
             return i;
-        }      
+        }
     }
 }

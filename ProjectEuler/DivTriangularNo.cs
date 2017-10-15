@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class DivTriangularNo
+    public class DivTriangularNo
     {
         public void display()
         {
@@ -38,7 +38,7 @@ namespace ProjectEuler
         /// used brute force approach. Need to come back to do a quicker version.
         /// </summary>
         /// <returns></returns>
-        public string calc()
+        public int calc()
         {
             bool findTriangleNo = true;
             int sum = 0;
@@ -63,12 +63,10 @@ namespace ProjectEuler
                             findTriangleNo = false;
                             break;
                         }
-                    } 
+                    }
                 }
-
             }
-            return sum.ToString();
-            
+            return sum;
         }
     }
 }

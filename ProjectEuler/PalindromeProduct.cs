@@ -25,7 +25,7 @@ namespace ProjectEuler
             Console.WriteLine("Find the largest palindrome made from the product of two 3-digit numbers. \n");
 
             var tuple = calc();
-            Console.WriteLine(tuple.Item1 + " * " + tuple.Item2 + " = " + tuple.Item3); 
+            Console.WriteLine(tuple.Item1 + " * " + tuple.Item2 + " = " + tuple.Item3);
         }
 
         public Tuple<int, int, int> calc()
@@ -36,7 +36,7 @@ namespace ProjectEuler
             int noOne = 0;
             int noTwo = 0;
 
-            for (int i = 999; i > 99; i-- )
+            for (int i = 999; i > 99; i--)
             {
                 for (int j = 999; j > 99; j--)
                 {
@@ -55,12 +55,12 @@ namespace ProjectEuler
                             noOne = i;
                             noTwo = j;
                         }
-                    }     
-                } 
+                    }
+                }
             }
             return new Tuple<int, int, int>(noOne, noTwo, noLargest);
         }
     }
 }
- 
+
 

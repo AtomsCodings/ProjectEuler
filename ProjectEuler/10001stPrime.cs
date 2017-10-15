@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class _10001stPrime
+    public class _10001stPrime
     {
         public void display()
         {
@@ -20,10 +20,10 @@ namespace ProjectEuler
             Console.WriteLine("By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.");
             Console.WriteLine("What is the 10001st prime number?");
 
-            calc();
+            Console.WriteLine("1001st prime number is: " + calc());
         }
 
-        public void calc()
+        public long calc()
         {
             List<long> primeNumbers = new List<long>() { 2 };
             for (long i = 3; i < long.MaxValue; i += 2)
@@ -33,12 +33,12 @@ namespace ProjectEuler
                     primeNumbers.Add(i);
                     if (primeNumbers.Count == 10001)
                     {
-                        Console.WriteLine(i);
+                        return i;
                         break;
                     }
                 }
             }
-
+            return 0;
         }
     }
 }

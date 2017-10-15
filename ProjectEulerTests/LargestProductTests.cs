@@ -9,27 +9,27 @@ using System.Threading.Tasks;
 namespace ProjectEuler.Tests
 {
     [TestClass()]
-    public class SumSquareDifTests
+    public class LargestProductTests
     {
         [TestMethod()]
         public void calcTest()
         {
             //Arrange
-            long factualAnswer = 25164150;
+            long factualAnswer = 23514624000;
             long answer = 0;
 
             //Act
-            SumSquareDif sumSquareDif = new SumSquareDif();
-            answer = sumSquareDif.calc();
+            LargestProduct largestProduct = new LargestProduct();
+            answer = largestProduct.calc();
 
-            //Assert
+            //Assert.Fail
             Assert.IsTrue(Equals(factualAnswer, answer));
 
             //Arrange
             answer = 0;
 
             //Act
-            answer = sumSquareDif.calcUsingMath();
+            answer = largestProduct.calc();
 
             //Assert
             Assert.IsTrue(Equals(factualAnswer, answer));

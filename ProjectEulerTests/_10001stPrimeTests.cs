@@ -9,27 +9,27 @@ using System.Threading.Tasks;
 namespace ProjectEuler.Tests
 {
     [TestClass()]
-    public class SumSquareDifTests
+    public class _10001stPrimeTests
     {
         [TestMethod()]
         public void calcTest()
         {
             //Arrange
-            long factualAnswer = 25164150;
+            long factualAnswer = 104743;
             long answer = 0;
 
             //Act
-            SumSquareDif sumSquareDif = new SumSquareDif();
-            answer = sumSquareDif.calc();
+            _10001stPrime prime = new _10001stPrime();
+            answer = prime.calc();
 
-            //Assert
+            //Assert.Fail
             Assert.IsTrue(Equals(factualAnswer, answer));
 
             //Arrange
             answer = 0;
 
             //Act
-            answer = sumSquareDif.calcUsingMath();
+            answer = prime.calc();
 
             //Assert
             Assert.IsTrue(Equals(factualAnswer, answer));

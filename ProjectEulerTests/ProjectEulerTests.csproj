@@ -51,13 +51,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DivTriangularNoTests.cs" />
     <Compile Include="EvenFibonacciTests.cs" />
     <Compile Include="LargestPrimeTests.cs" />
+    <Compile Include="LargestProdInGridTests.cs" />
+    <Compile Include="LargestProductTests.cs" />
     <Compile Include="MutiplesofTests.cs" />
     <Compile Include="PalindromeProductTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PythagoreanTripletTests.cs" />
     <Compile Include="SmallestMultipleTests.cs" />
+    <Compile Include="SumOfPrimesTests.cs" />
     <Compile Include="SumSquareDifTests.cs" />
+    <Compile Include="_10001stPrimeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjectEuler\ProjectEuler.csproj">
